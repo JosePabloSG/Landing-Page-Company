@@ -1,0 +1,99 @@
+{
+    "header": {
+        "logo": "../../public/assets/Logo.svg",
+        "name": "Chaves Scape"
+    },
+    "hero": {
+        "subtitle": "Capturando momentos",
+        "title": "Que podemos ofrecerle al cliente",
+        "paragraph": "Buscamos darle al cliente la mayor confianza en lo que a precio y comodidad se refiere, tomando grandes fotografias dependiendo de sus intereses.",
+        "image": "../../public/assets/hero.webp"
+    },
+    "services": {
+        "title": "Les brindamos los siguientes servicios",
+        "subtitle": "Nuestros servicios",
+        "paragraph": "4 tipos de servicios para la eleccion del cliente y tiene la disponibilidad de eligir el que vea mas conveniente",
+        "service": [
+            {
+                "title": "Fotografia Profesional",
+                "paragraph": "Los servicios de fotografía profesional pueden ser contratados para una variedad de propósitos, incluyendo eventos, retratos, productos, moda y publicidad.",
+                "image": "../../public/assets/camera.svg"
+            },
+            {
+                "title": "Fotografias con Dron",
+                "paragraph": "Nuestros pilotos de drones profesionales cuentan con la experiencia y el equipo necesario para crear imágenes de alta calidad que te dejarán sin aliento.",
+                "image": "../../public/assets/image.svg"
+            },
+            {
+                "title": "Videos aereos con dron ",
+                "paragraph": "En este caso nuestros drones son utilizados para capturar videos aéreos de eventos deportivos, conciertos, bodas y otros eventos.",
+                "image": "../../public/assets/camera-video.svg"
+            },
+            {
+                "title": "Diferentes eventos",
+                "paragraph": "Los eventos son una excelente manera de capturar los momentos más importantes en el mismo. Si estás buscando una forma profesional y creativa de documentar tu evento nosotros somos la mejor opción.",
+                "image": "../../public/assets/calendar-check.svg"
+            }
+        ]
+    },
+    "gallery": [
+        {
+            "image": "../../public/assets/Gallery-1.webp"
+        },
+        {
+            "image": "../../public/assets/Gallery-2.webp"
+        },
+        {
+            "image": "../../public/assets/Gallery-3.webp"
+        }
+    ],
+    "events":{
+        "title": "Diferente servicios  de fotografia",
+        "subtitle": "Diferente servicios  de fotografia",
+        "event":[
+            {
+                "title":"Eventos Deportivos",
+                "image": "../../public/assets/Events-Sporting.webp"
+            },
+            {
+                "title":"Eventos Especiales",
+                "image": "../../public/assets/Events-Special.webp"
+            },
+            {
+                "title":"Eventos Artisticos",
+                "image": "../../public/assets/Events-Artistic.webp"
+            },
+            {
+                "title":"Eventos Mascotas",
+                "image": "../../public/assets/Events-Pets.webp"
+            }
+        ]
+    },
+    "footer":{
+        "image": "../../public/assets/Logo.svg",
+        "title": "Chaves Scape",
+        "paragraph": "Gracias por depositar la confianza en nuestro trabajo, nos queda satisfacción de saber que hemos dejado una buena impresion de imágenes hermosas y recuerdos duraderos.",
+        "home": [
+            {
+                "title": "Inicio"
+            },
+            {
+                "paragraph": "Productos"
+            },
+            {
+                "paragraph": "Acerca de nosotros"
+            }
+        ],
+        "contact":[
+            {
+                "title": "Contacto"
+            },
+            {
+                "paragraph": "Achaba03x@gmail.com"
+            },
+            {
+                "paragraph": "Suarezgomezjosepablo03@gmail.com"
+            }
+        ]
+    }
+}
