@@ -36,40 +36,43 @@
             }
         ]
     },
-    "gallery": [
-        {
-            "image": "../../public/assets/Gallery-1.webp"
-        },
-        {
-            "image": "../../public/assets/Gallery-2.webp"
-        },
-        {
-            "image": "../../public/assets/Gallery-3.webp"
-        }
-    ],
-    "events":{
+    "gallery": {
+        "title": "Galeria de fotos",
+        "picture": [
+            {
+                "image": "../../public/assets/Gallery-1.webp"
+            },
+            {
+                "image": "../../public/assets/Gallery-2.webp"
+            },
+            {
+                "image": "../../public/assets/Gallery-3.webp"
+            }
+        ]
+    },
+    "events": {
         "title": "Diferente servicios  de fotografia",
         "subtitle": "Diferente servicios  de fotografia",
-        "event":[
+        "event": [
             {
-                "title":"Eventos Deportivos",
+                "title": "Eventos Deportivos",
                 "image": "../../public/assets/Events-Sporting.webp"
             },
             {
-                "title":"Eventos Especiales",
+                "title": "Eventos Especiales",
                 "image": "../../public/assets/Events-Special.webp"
             },
             {
-                "title":"Eventos Artisticos",
+                "title": "Eventos Artisticos",
                 "image": "../../public/assets/Events-Artistic.webp"
             },
             {
-                "title":"Eventos Mascotas",
+                "title": "Eventos Mascotas",
                 "image": "../../public/assets/Events-Pets.webp"
             }
         ]
     },
-    "footer":{
+    "footer": {
         "image": "../../public/assets/Logo.svg",
         "title": "Chaves Scape",
         "paragraph": "Gracias por depositar la confianza en nuestro trabajo, nos queda satisfacción de saber que hemos dejado una buena impresion de imágenes hermosas y recuerdos duraderos.",
@@ -84,7 +87,7 @@
                 "paragraph": "Acerca de nosotros"
             }
         ],
-        "contact":[
+        "contact": [
             {
                 "title": "Contacto"
             },

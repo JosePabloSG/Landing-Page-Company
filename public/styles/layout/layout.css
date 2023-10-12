@@ -1,49 +1,52 @@
-body{
+body {
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 2%;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-header{
-    background-color: black;
+
+header {
     width: 100%;
-    height: 103px;
+    background-color: #F5F5F5;
+
 }
-main{
+
+main {
     width: 100%;
     height: 100%;
+    margin: 0;
+    padding-top: 1%;
 }
-.hero{
-    background-color: brown;
+
+.hero {
+    background: #FFF7E3;
     width: 100%;
-    height: 908px;
 }
-.services-section{
-    background-color: darkcyan;
+
+.services-section {
+    margin-top: 0;
     width: 100%;
-    height: 588px;
 }
-.gallery-section{
+
+.gallery-section {
+    background-color: #F5ECD8;
+    border-radius: 10px;
+}
+
+.events-section {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.form-section {
     background-color: brown;
-    margin-top: 2%;
     width: 100%;
     height: 479px;
 }
-.events-section{
-    background-color: darkcyan;
-    width: 100%;
-    height: 804px;
-}
-.form-section{
-    background-color: brown;
-    margin-top: 2%;
-    width: 100%;
-    height: 479px;
-}
-footer{
+
+footer {
     background-color: black;
     margin-top: 2%;
     width: 100%;
