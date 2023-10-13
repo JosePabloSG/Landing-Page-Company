@@ -12,12 +12,13 @@ function render () {
     const servicesData = data.services
     const galleryData = data.gallery
     const eventsData = data.events
-
+    const footerData = data.footer
     renderEvents(eventsData)
     renderGallery(galleryData)
     renderServices(servicesData)
     renderHero(heroData)
     renderHeader(headerData)
+    renderFooter(footerData)
   }).catch((err) => {
     console.log(err)
   })
@@ -118,5 +119,33 @@ function renderEvents (eventsData) {
     title.innerHTML = event.title
     card.appendChild(title)
     eventsContainer.appendChild(card)
+  })
+}
+
+function renderFooter (footerData) {
+  // Hace conocer el HTML al javaScript nombrando las variables que traen las etiquetas HTML con el querrySelector
+  const footerLogo = document.querySelector('.img-footer')
+  const footerTitle = document.querySelector('.footer-title')
+  const footerParagraph = document.querySelector('.footer-paragraph')
+  const footerHome = document.querySelector('.home-home')
+  const footerHomeProducts = document.querySelector('.home-product')
+  const footerHomeAboutUs = document.querySelector('.home-about-us')
+  const footerContact = document.querySelector('.contact-contact')
+  const footerContactEmails = document.querySelectorAll('.contact-email') // Se usa para asignarle a todos los que tengan el mismo nombre los elementos del json
+
+  // Asigna los valores del json a las variables creadas
+  footerLogo.setAttribute('src', footerData.image)
+  footerTitle.innerHTML = footerData.title
+  footerParagraph.innerHTML = footerData.paragraph
+  // Accede al arreglo 'home' y obtén el elemento específico
+  footerHome.innerHTML = footerData.home[0].title // Accedes al primer elemento
+  // Accede al arreglo 'home' y obtén otros elementos si es necesario
+  footerHomeProducts.innerHTML = footerData.home[1].paragraph // Accedes al segundo elemento
+  footerHomeAboutUs.innerHTML = footerData.home[2].paragraph // Accedes al tercer elemento
+  // Accede al arreglo 'contact' y obtén elementos específicos
+  footerContact.innerHTML = footerData.contact[0].title // Accedes al primer elemento del arreglo 'contact'
+  // Utiliza forEach para asignar los valores de los correos electrónicos en el arreglo 'contact'
+  footerContactEmails.forEach((element, index) => {
+    element.innerHTML = footerData.contact[index + 1].paragraph
   })
 }
