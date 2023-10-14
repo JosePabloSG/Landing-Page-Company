@@ -51,8 +51,9 @@
         ]
     },
     "events": {
-        "title": "Diferente servicios  de fotografia",
-        "subtitle": "Diferente servicios  de fotografia",
+        "title": "Diferentes servicios  de fotografia",
+        "subtitle": "DISPONIBLES",
+        "paragraph":"Capturemos los momentos más importantes de tu vida con imágenes de alta calidad.",
         "event": [
             {
                 "title": "Eventos Deportivos",
