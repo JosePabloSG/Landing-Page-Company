@@ -257,6 +257,108 @@ header li {
     transition: transform 0.5s ease;
 }
 
+.events-section{
+
+    background-color: #f0eeee;
+    width: 500%;
+    padding: 2%;
+}
+
+.item-card-event img{
+
+    width: 130%;
+    height: 85%;
+    border-radius: 5%;
+}
+
+  .item-card-event h3{
+
+    background-color: #ffffff;
+    width: 128%;
+    height: 18%;
+    border-radius: 5%
+  } 
+
+.events-cards{
+
+    width: 8%;
+    height: 5%;
+    margin-left: -1%;
+    text-align: center;
+    padding-right: 10%;
+    padding: 2%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 15px;
+    gap: 15%
+    
+}
+
+.events-iner{
+
+   margin-top: 3%;
+   padding-left: 0%;
+}
+
+.events-subtitle{
+
+    color: #C5AF87;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.events-title{
+
+    color: #141E32;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.events-paragraph{
+
+    color: #969696;
+    font-family: Poppins;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.form-section{
+
+    background-color: #F5ECD8;
+    padding: 6%;
+    height: 10%;
+}
+.card-form{
+
+    display: grid;
+    row-gap: 40%;
+    font-size: 110%;
+}
+.name{
+
+    width: 40%;
+    height: 100%;
+}
+.phone{
+
+    width: 40%;
+    height: 100%;
+}
+.email{
+
+    width: 41%;
+    height: 100%;
+}
+
 footer {
     background-color: #393E46;
     padding: 50px 90px;
