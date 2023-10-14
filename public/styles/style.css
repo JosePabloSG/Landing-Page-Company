@@ -257,30 +257,27 @@ header li {
     transition: transform 0.5s ease;
 }
 
-.events-section{
-
-    background-color: #f0eeee;
+.events-section {
     width: 500%;
     padding: 2%;
 }
 
-.item-card-event img{
+.item-card-event img {
 
     width: 130%;
     height: 85%;
     border-radius: 5%;
 }
 
-  .item-card-event h3{
+.item-card-event h3 {
 
     background-color: #ffffff;
     width: 128%;
     height: 18%;
     border-radius: 5%
-  } 
+}
 
-.events-cards{
-
+.events-cards {
     width: 8%;
     height: 5%;
     margin-left: -1%;
@@ -292,16 +289,15 @@ header li {
     grid-template-rows: repeat(2, 1fr);
     row-gap: 15px;
     gap: 15%
-    
 }
 
-.events-iner{
+.events-iner {
 
-   margin-top: 3%;
-   padding-left: 0%;
+    margin-top: 3%;
+    padding-left: 0%;
 }
 
-.events-subtitle{
+.events-subtitle {
 
     color: #C5AF87;
     font-family: Inter;
@@ -311,7 +307,7 @@ header li {
     line-height: normal;
 }
 
-.events-title{
+.events-title {
 
     color: #141E32;
     font-family: Poppins;
@@ -321,7 +317,7 @@ header li {
     line-height: normal;
 }
 
-.events-paragraph{
+.events-paragraph {
 
     color: #969696;
     font-family: Poppins;
@@ -331,30 +327,28 @@ header li {
     line-height: normal;
 }
 
-.form-section{
-
-    background-color: #F5ECD8;
+.form-section {
     padding: 6%;
     height: 10%;
 }
-.card-form{
 
+.card-form {
     display: grid;
     row-gap: 40%;
     font-size: 110%;
 }
-.name{
 
+.name {
     width: 40%;
     height: 100%;
 }
-.phone{
 
+.phone {
     width: 40%;
     height: 100%;
 }
-.email{
 
+.email {
     width: 41%;
     height: 100%;
 }
@@ -364,23 +358,27 @@ footer {
     padding: 50px 90px;
     color: #FFF;
     height: 20rem;
-    
+
 
     width: 100%;
     display: grid;
     grid-template-columns: 2fr 4fr 2fr 2fr;
     grid-gap: 5%;
-  }
+}
 
 footer h1 {
-  
-  }
+    font-size: 24px;
+    font-family: Poppins;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
 
 footer p {
     font-size: 12px;
-    font-family: Poppins;
+    font-family: inter;
     font-weight: normal
-  }
+}
+
 .footer-iner a {
     margin-top: 20px;
     display: inline-block;
@@ -410,20 +408,21 @@ footer p {
     padding: 20px;
     color: var(--light, #F4F4F4);
 }
-.footer-iner{
+
+.footer-iner {
     display: grid;
     grid-column: 2/3;
 }
 
-.contact-container{
+.contact-container {
     margin-right: 10rem;
 }
 
-.home-container{
+.home-container {
     margin-left: 200px;
 }
 
-.home-home{
+.home-home {
     margin-bottom: 53px;
 }
 
@@ -432,9 +431,9 @@ footer p {
 }
 
 .contact-container {
-    
+
 }
 
-.home-container{
-   
+.home-container {
+    
 }
