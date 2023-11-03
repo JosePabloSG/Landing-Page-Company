@@ -12,11 +12,10 @@ body {
 
 main {
     display: grid;
-    grid-template-columns: 1fr, 2fr,3fr,4fr;
-    width: 200%; /* Ancho del cuadro en porcentaje */
-    background-color: blueviolet;
-    padding: 20px; /* Espacio alrededor del contenido dentro del cuadro */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Sombra para el cuadro */
+    width: 80%; 
+    background-color: #969696;
+    height: 70%;
+    padding: 50px; 
     grid-template-areas: 
     "card inputUpdate";
 }
