@@ -4,7 +4,7 @@ window.onload = () => {
 }
 
 function render () {
-  fetch('../src/mocks/data.json').then((response) => {
+  fetch('http://localhost:3000/api/companies').then((response) => {
     return response.json()
   }).then((data) => {
     renderData(data)
@@ -17,6 +17,7 @@ function render () {
 }
 
 function renderData (data) {
+  console.log('Rendering data:', data[0])
   const logoHeaderElement = document.querySelector('.header-logo')
   const nameHeaderElement = document.querySelector('.header-page-name')
 
@@ -44,93 +45,107 @@ function renderData (data) {
   const footerContactElement = document.querySelector('.contact-contact')
   const footerContactEmail = document.querySelectorAll('.contact-email')
 
-  logoHeaderElement.src = data.logoheader
-  nameHeaderElement.innerHTML = data.nameheader
+  logoHeaderElement.src = data[0].logoheader
+  nameHeaderElement.innerHTML = data[0].nameheader
 
-  subtitleHeroElement.innerHTML = data.subtitleHero
-  titleHeroElement.innerHTML = data.titleHero
-  paragraphHeroElement.innerHTML = data.paragraphHero
-  imageHeroElement.src = data.imageHero
+  subtitleHeroElement.innerHTML = data[0].subtitleHero
+  titleHeroElement.innerHTML = data[0].titleHero
+  paragraphHeroElement.innerHTML = data[0].paragraphHero
+  imageHeroElement.src = data[0].imageHero
 
-  subtitleServicesElement.innerHTML = data.subtitleServices
-  titleServicesElement.innerHTML = data.titleServices
-  paragraphServicesElement.innerHTML = data.paragraphServices
+  subtitleServicesElement.innerHTML = data[0].subtitleServices
+  titleServicesElement.innerHTML = data[0].titleServices
+  paragraphServicesElement.innerHTML = data[0].paragraphServices
 
-  galleryTitleElement.innerHTML = data.galleryTitle
+  galleryTitleElement.innerHTML = data[0].galleryTitle
 
-  eventsSubtitleElement.innerHTML = data.subtitleEvents
-  eventsTitleElement.innerHTML = data.titleEvents
-  eventsParagraphElement.innerHTML = data.paragraphEvents
+  eventsSubtitleElement.innerHTML = data[0].subtitleEvents
+  eventsTitleElement.innerHTML = data[0].titleEvents
+  eventsParagraphElement.innerHTML = data[0].paragraphEvents
 
-  footerImageElement.src = data.imageFooter
-  footerTitleElement.innerHTML = data.titleFooter
-  footerParagraphElement.innerHTML = data.paragraphFooter
-  footerHomeElement.innerHTML = data.titleHome
-  footerHomeProductsElement.innerHTML = data.paragraphHomeProducts
-  footerHomeAboutUsElement.innerHTML = data.paragraphHomeAboutUs
-  footerContactElement.innerHTML = data.titleContact
-  footerContactEmail[0].innerHTML = data.paragraphContactAchaba
-  footerContactEmail[1].innerHTML = data.paragraphContactSuarez
+  footerImageElement.src = data[0].imageFooter
+  footerTitleElement.innerHTML = data[0].titleFooter
+  footerParagraphElement.innerHTML = data[0].paragraphFooter
+  footerHomeElement.innerHTML = data[0].titleHome
+  footerHomeProductsElement.innerHTML = data[0].paragraphHomeProducts
+  footerHomeAboutUsElement.innerHTML = data[0].paragraphHomeAboutUs
+  footerContactElement.innerHTML = data[0].titleContact
+  footerContactEmail[0].innerHTML = data[0].paragraphContactAchaba
+  footerContactEmail[1].innerHTML = data[0].paragraphContactSuarez
 }
 
 
 function renderServices (data) {
-  console.log('Rendering services with data:', data.service)
-  const serviceArray = data.service
+  console.log('Rendering services with data:', data[0].service)
+  const serviceArray = data[0].service
   const servicesContainer = document.querySelector('.services-cards')
 
-  serviceArray.forEach((service) => {
-    const card = document.createElement('div')
-    card.classList.add('item-card-service')
+  if (serviceArray) {
+    serviceArray.forEach((service) => {
+      const card = document.createElement('div')
+      card.classList.add('item-card-service')
 
-    const image = document.createElement('img')
-    image.src = service.image
-    card.appendChild(image)
+      const image = document.createElement('img')
+      image.src = service.url
+      card.appendChild(image)
 
-    const title = document.createElement('h3')
-    title.innerHTML = service.title
-    card.appendChild(title)
+      const title = document.createElement('h3')
+      title.innerHTML = service.title
+      card.appendChild(title)
 
-    const paragraph = document.createElement('p')
-    paragraph.innerHTML = service.paragraph
-    card.appendChild(paragraph)
+      const paragraph = document.createElement('p')
+      paragraph.innerHTML = service.paragraph
+      card.appendChild(paragraph)
 
-    servicesContainer.appendChild(card)
-  })
+      servicesContainer.appendChild(card)
+    })
+  } else {
+    console.log('No services found in data')
+  }
 }
 
 function renderGallery (data) {
-  const galleryArray = data.gallery
+  console.log('Rendering gallery with data:', data[0].galleries)
+  const galleryArray = data[0].galleries
   const galleryContainer = document.querySelector('.gallery-images')
 
-  galleryArray.forEach((gallery) => {
-    const card = document.createElement('div')
-    card.classList.add('item-card-gallery')
-
-    const image = document.createElement('img')
-    image.src = gallery.image
-    card.appendChild(image)
-
-    galleryContainer.appendChild(card)
-  })
+  if(galleryArray){
+    galleryArray.forEach((gallery) => {
+      const card = document.createElement('div')
+      card.classList.add('item-card-gallery')
+  
+      const image = document.createElement('img')
+      image.src = gallery.url
+      card.appendChild(image)
+  
+      galleryContainer.appendChild(card)
+    })
+  } else {
+    console.log('No gallery found in data')
+  }
 }
 
 function renderEvents (data) {
-  const eventsArray = data.events
+  console.log('Rendering events with data:', data[0].event)
+  const eventsArray = data[0].event
   const eventsContainer = document.querySelector('.events-cards')
 
-  eventsArray.forEach((events) => {
-    const card = document.createElement('div')
-    card.classList.add('item-card-event')
-
-    const image = document.createElement('img')
-    image.src = events.image
-    card.appendChild(image)
-
-    const title = document.createElement('h3')
-    title.innerHTML = events.title
-    card.appendChild(title)
-
-    eventsContainer.appendChild(card)
-  })
+  if(eventsArray){
+    eventsArray.forEach((events) => {
+      const card = document.createElement('div')
+      card.classList.add('item-card-event')
+  
+      const image = document.createElement('img')
+      image.src = events.url
+      card.appendChild(image)
+  
+      const title = document.createElement('h3')
+      title.innerHTML = events.title
+      card.appendChild(title)
+  
+      eventsContainer.appendChild(card)
+    })
+  } else {
+    console.log('No events found in data')
+  }
 }
