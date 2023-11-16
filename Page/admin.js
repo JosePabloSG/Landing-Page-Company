@@ -44,6 +44,7 @@ function deleteGallery(galleryId) {
     })
     .then((data) => {
       console.log('Galería eliminada exitosamente:', data);
+      document.querySelector('#input-delete').value = '';
       renderGallery(data);
     })
     .catch((error) => {
@@ -76,6 +77,12 @@ if (updateButton) {
       })
       .then((data) => {
         console.log('El servicio fue actualizado exitosamente:', data);
+
+        document.querySelector('#input-update').value = '';
+        document.querySelector('.btn-title').value = '';
+        document.querySelector('.btn-Description').value = '';
+        document.querySelector('.btn-image').value = '';
+
       })
   });
 }

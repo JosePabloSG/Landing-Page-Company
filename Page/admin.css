@@ -8,11 +8,14 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #222222;
+    color: #fff;
 }
 
 main {
     display: grid;
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr 1fr;
     width: 60%;
     background-color: #969696;
     height: 70%;
@@ -29,16 +32,78 @@ main {
     background: #C5AF87;
     transition: background-color 0.5s ease;
     padding: 2%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Image-Card {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
 }
 
 .Update-Inputs {
     display: grid;
     grid-area: inputUpdate;
+    gap: 20px;
 }
 
+.Image-input,
+.Title-input,
+.Description-input,
+.Id-Input,
+.Update-Enter,
 .Delete-form {
-    display: flex;
-    align-items: center;
+    text-align: center;
 }
 
+.btn-image,
+.btn-title,
+.btn-Description,
+#input-update,
+#input-delete {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: transparent;
+    color: black;
+    transition: font-size 0.3s, margin-bottom 0.3s;
+}
 
+.btn-image:hover,
+.btn-title:hover,
+.btn-Description:hover,
+#input-update:hover,
+#input-delete:hover {
+    font-size: 0.8rem; /* Tamaño de fuente más pequeño al pasar el mouse */
+    margin-bottom: 12px; /* Ajusta según sea necesario */
+}
+
+.btn-image::placeholder,
+.btn-title::placeholder,
+.btn-Description::placeholder,
+#input-update::placeholder,
+#input-delete::placeholder {
+    color: transparent;
+}
+
+.Delete-form,
+.Update-Enter {
+    text-align: center;
+}
+
+button {
+    background-color: #11998e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
