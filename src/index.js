@@ -4,7 +4,7 @@ window.onload = () => {
 }
 
 function render () {
-  fetch('http://localhost:3000/api/companies').then((response) => {
+  fetch('http://localhost:3000/api/companies?id=1').then((response) => {
     return response.json()
   }).then((data) => {
     renderData(data)
