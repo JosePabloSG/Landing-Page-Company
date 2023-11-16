@@ -1,15 +1,7 @@
 window.onload = () => {
   console.log('La página se ha cargado completamente');
   render();
-
-
-  const deleteGalleryButton = document.getElementById('Btn-Delete');
-  if (deleteGalleryButton) {
-    deleteGalleryButton.addEventListener('click', () => {
-      const galleryIdToDelete = document.querySelector('#input-delete').value;
-      deleteGallery(galleryIdToDelete);
-    });
-  }
+  deleteGallery();
 };
 
 function render() {
@@ -28,6 +20,14 @@ function render() {
 
 function deleteGallery(galleryId) {
 
+  const deleteGalleryButton = document.getElementById('Btn-Delete');
+  if (deleteGalleryButton) {
+    deleteGalleryButton.addEventListener('click', () => {
+      const galleryIdToDelete = document.querySelector('#input-delete').value;
+      deleteGallery(galleryIdToDelete);
+    });
+  }
+  
   fetch(`http://localhost:3000/galleries/${galleryId}`, {
     method: 'DELETE',
     headers: {
