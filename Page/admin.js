@@ -76,10 +76,6 @@ if (updateButton) {
       })
       .then((data) => {
         console.log('El servicio fue actualizado exitosamente:', data);
-        renderServices(data);
       })
-      .catch((error) => {
-        console.error('Error al actualizar el servicio:', error);
-      });
   });
 }
