@@ -3,6 +3,7 @@ window.onload = () => {
   render();
   deleteGallery();
   updateCompany();
+  patchCompany();
 };
 
 function render() {
@@ -89,6 +90,46 @@ if (updateButton) {
 }
 
 function updateCompany() {
-  const updataButtonHero = document.querySelector('#Btn-Update-Hero');
+  const updateButtonHero = document.querySelector('#Btn-Update-Hero');
 
+  if (updateButtonHero) {
+    updateButtonHero.addEventListener('click', () => {
+      const companyIdToUpdate = document.querySelector('#input-update-hero-id').value;
+      const updatedData = {
+        paragraphHero: document.querySelector('#input-update-hero-paragraph').value
+      };
+      const companyId = parseInt(companyIdToUpdate);
+      if (!isNaN(companyId)) {
+        patchCompany(companyId, updatedData);
+      } else {
+        console.error('El ID de la empresa no es un número válido');
+      }
+    });
+  }
 }
+
+function patchCompany(companyId, updatedData) {
+  fetch(`http://localhost:3000/api/companies/${companyId}`, {
+    method: 'PATCH',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(updatedData),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('La respuesta de la red no fue exitosa');
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log('Empresa actualizada exitosamente:', data);
+    })
+    .catch((error) => {
+      console.error('Error al actualizar la empresa:', error);
+    });
+}
+document.addEventListener('DOMContentLoaded', function() {
+  updateCompany();
+});
+
