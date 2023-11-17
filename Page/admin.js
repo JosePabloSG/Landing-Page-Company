@@ -2,7 +2,7 @@ window.onload = () => {
   console.log('La página se ha cargado completamente');
   render();
   deleteGallery();
-  deleteCompany();
+  updateCompany();
 };
 
 function render() {
@@ -101,21 +101,7 @@ if (updateButton) {
     });
   }
   
-  function deleteCompany(companyId) {
-  
-    const deleteCompanyButton = document.getElementById('Btn-Delete');
-    if (deleteCompanyButton) {
-      deleteCompanyButton.addEventListener('click', () => {
-        const companyIdToDelete = document.querySelector('#input-delete').value;
-        deleteCompany(companyIdToDelete);
-        
-      });
-    }
+  function updateCompany() {
+
   }
 }
-
-     
-     
-     
-
-  
