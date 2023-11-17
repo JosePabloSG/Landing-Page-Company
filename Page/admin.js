@@ -86,22 +86,9 @@ if (updateButton) {
 
       })
   });
+}
 
-  function render() {
-  
-    fetch('http://localhost:3000/companies/').then((response) => {
-      return response.json();
-    }).then((data) => {
-      renderData(data);
-      renderServices(data);
-      renderGallery(data);
-      renderEvents(data);
-    }).catch((error) => {
-    
-    });
-  }
-  
-  function updateCompany() {
+function updateCompany() {
+  const updataButtonHero = document.querySelector('#Btn-Update-Hero');
 
-  }
 }
