@@ -2,6 +2,7 @@ window.onload = () => {
   console.log('La página se ha cargado completamente');
   render();
   deleteGallery();
+  deleteCompany();
 };
 
 function render() {
@@ -85,4 +86,36 @@ if (updateButton) {
 
       })
   });
+
+  function render() {
+  
+    fetch('http://localhost:3000/companies/').then((response) => {
+      return response.json();
+    }).then((data) => {
+      renderData(data);
+      renderServices(data);
+      renderGallery(data);
+      renderEvents(data);
+    }).catch((error) => {
+    
+    });
+  }
+  
+  function deleteCompany(companyId) {
+  
+    const deleteCompanyButton = document.getElementById('Btn-Delete');
+    if (deleteCompanyButton) {
+      deleteCompanyButton.addEventListener('click', () => {
+        const companyIdToDelete = document.querySelector('#input-delete').value;
+        deleteCompany(companyIdToDelete);
+        
+      });
+    }
+  }
 }
+
+     
+     
+     
+
+  
