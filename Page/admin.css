@@ -74,6 +74,7 @@ main {
     background: transparent;
     color: black;
     transition: font-size 0.3s, margin-bottom 0.3s;
+    cursor: pointer;
 }
 
 .btn-image:hover,
@@ -90,8 +91,15 @@ main {
 .btn-Description::placeholder,
 #input-update::placeholder,
 #input-delete::placeholder {
-    color: transparent;
+    color: white;
 }
+
+#Btn-Delete:hover,
+#Btn-update-hero:hover,
+#Btn-Update:hover{
+    background-color: #036159;
+}
+
 
 .Delete-form,
 .Update-Enter {
